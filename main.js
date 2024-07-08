@@ -6,7 +6,7 @@
 
 // function getName() {
 //     let name = prompt("Enter your name")
-//     console.log(`${name} is active now`);
+//     return(`${name} is active now`);
 // }
 // getName()
 
@@ -17,13 +17,13 @@
 
 // let numbers = function (a,b,c) {
 //     if(a>b && a>c){
-//         console.log(a);
+//         return(a);
 //     }
 //     else if(b>a && b>c){
-//         console.log(b);
+//         return(b);
 //     }
 //     else if(c>a && c>b){
-//         console.log(c);
+//         return(c);
 //     }
 // }
 // numbers(9,7,2)
@@ -42,7 +42,7 @@
 //   let rubl = 45;
 //   let usd = 4;
 //   let overall = usd * 75 + rubl;
-//   console.log(`Bütün depozitlər üzrə məbləğ: ${overall} rubl.`);
+//   return(`Bütün depozitlər üzrə məbləğ: ${overall} rubl.`);
 // }
 // getAmount()
 
@@ -56,253 +56,176 @@
 // Hər hansı digər iki rəqəmli rəqəmi daxil edilməsi zamanı, boşluqla ayrılmış iki söz göstərilir,
 // məsələn, "iyirmi bir".
 
-// function numberToText(number) {
-//     let num = number.toString();
-//     let count = num.length;
-//     let onluq = "";
-//     let teklik = "";
-//     if (+num[0] === 1) {
-//       onluq = "On";
-//     } else if (+num[0] === 2) {
-//       onluq = "Iyirmi";
-//     } else if (+num[0] === 3) {
-//       onluq = "Otuz";
-//     } else if (+num[0] === 4) {
-//       onluq = "Qirx";
-//     } else if (+num[0] === 5) {
-//       onluq = "Elli";
-//     } else if (+num[0] === 6) {
-//       onluq = "Altmis";
-//     } else if (+num[0] === 7) {
-//       onluq = "Yetmis";
-//     } else if (+num[0] === 8) {
-//       onluq = "Seksen";
-//     } else if (+num[0] === 9) {
-//       onluq = "Doxsan";
-//     } else if (+num[0] === 0) {
-//       onluq = "";
-//     }
-//     if (+num[1] === 0) {
-//       teklik = "";
-//     } else if (+num[1] === 1) {
-//       teklik = "bir";
-//     } else if (+num[1] === 2) {
-//       teklik = "iki";
-//     } else if (+num[1] === 3) {
-//       teklik = "uc";
-//     } else if (+num[1] === 4) {
-//       teklik = "dord";
-//     } else if (+num[1] === 5) {
-//       teklik = "bes";
-//     } else if (+num[1] === 6) {
-//       teklik = "alti";
-//     } else if (+num[1] === 7) {
-//       teklik = "yeddi";
-//     } else if (+num[1] === 8) {
-//       teklik = "sekkiz";
-//     } else if (+num[1] === 9) {
-//       teklik = "doqquz";
-//     }
-//     let result = ""
-//     if (count === 1) {
-//       teklik = onluq
-//       result += onluq
-//     }else if(count === 2){
-//       result += onluq + " " + teklik
-//     }else{
-//       result += "Yanlis eded daxil edilib"
-//     }
-//     console.log(result);
+// let val = prompt("", "7");
+
+// function numberToText(val) {
+//   if (val.length === 1) {
+//     console.log(oneDigits(val));
+//   } else if (val.length === 2 && val[1] === "0") {
+//     console.log(tenDigits(val));
+//   } else if (val.length === 2 && val[1] !== "0")
+//     console.log(`${tenDigits(val)} ${oneDigits(val)}`);
+// }
+// numberToText(val);
+
+// function tenDigits(param) {
+//   switch (param[0]) {
+//     case "1":
+//       return "On";
+//     case "2":
+//       return "Iyirmi";
+//     case "3":
+//       return "Otuz";
+//     case "4":
+//       return "Qirx";
+//     case "5":
+//       return "Elli";
+//     case "6":
+//       return "Altmis";
+//     case "7":
+//       return "Yetmis";
+//     case "8":
+//       return "Seksen";
+//     case "9":
+//       return "Doxsan";
 //   }
-//   numberToText(3);
-  
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
-  // Task-05
-  // Parametr kimi iki ədəd qəbul edən və onlardan ən kiçiyini qaytaran min() funksiyası tərtib edin.
-  
-  // function min(num1, num2) {
-  //   if (num1 > num2) {
-  //     return num1;
-  //   } else if (num2 > num1) {
-  //     return num2;
-  //   } else {
-  //     return "Ededler beraberdir";
-  //   }
-  // }
-  
-  // console.log(min(8, 8));
-  
-  // Task-06
-  // Parametr kimi iki ədəd və riyazi əməliyyatın işarəsini qəbul edən və
-  // bu riyazi əməliyyatın nəticəsini qaytaran calc funksiyasını yazın.
-  // Məsələn, calc(4, 6, '+');  //  10 qaytaracaq
-  
-  // function calc(num1, num2, point) {
-  //   if (point === "+") {
-  //     return num1 + num2;
-  //   } else if (point === "-") {
-  //     return num1 - num2;
-  //   } else if (point === "*") {
-  //     return num1 * num2;
-  //   } else if (point === "/") {
-  //     return num1 / num2;
-  //   } else {
-  //     return "Error";
-  //   }
-  // }
-  // console.log(calc(50, 10, "+"));
-  
-  // Task-07
-  // Biletin şanslı olub olmadığını yoxlayan funksiya yazın.
-  // Altı rəqəmli ədəd qəbul edən və ilk üç rəqəminin cəminin ikinci üç rəqəminin cəminə bərabər
-  // olduğunu yoxlayan isLucky funksiyasını yazın.
-  // Bilet uğurlu olarsa, funksiya true, uğursuz olarsa, false qaytarmalıdır.
-  // Məsələn, isLucky(234801);  // true qaytaracaq
-  
-  // function isLucky() {
-  //   let num = 135615;
-  //   let str = num.toString();
-  //   let firstPart = Number(str[0]) + Number(str[1]) + Number(str[2]);
-  //   let secondPart = Number(str[3]) + Number(str[4]) + Number(str[5]);
-  //   if (firstPart === secondPart) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  // console.log(isLucky());
-  
-  // ((((((((((((((((((Task-08
-  // capitalizeWords funksiyasını yazın.
-  // Funksiya parametr kimi bir neçə sözdən ibarət mətn qəbul edir.
-  // Funksiya geriyə eyni mətni qaytarmalıdır, lakin içindəki hər söz böyük hərflə başlamalıdır.
-  // Məsələn, capitalizeWords('Hello my name is Harry'); // 'Hello My Name Is Harry' qaytaracaq.))))))))))))))))))
-  
-  // function capitalizaWords(str) {
-  //   let arr = str.split(" ");
-  //   let result = "";
-  //   for (let i = 0; i < arr.length; i++) {
-  //     let str2 = arr[i][0].toUpperCase() + arr[i].slice(1) + " ";
-  //     result += str2
-  //   }
-  //   console.log(result);
-  // }
-  // capitalizaWords("type anything bro");
-  
-  // Task-09
-  // Bir ədədi parametr kimi qəbul edən və cüt olduqda true,
-  // tək olduqda isə false qaytaran isEven () funksiyasını yazın.
-  
-  // function isEven(num) {
-  //   if (num % 2 === 0) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  // console.log(isEven(10));
-  
-  // Task-10
-  // Telefon nömrəsini parametr kimi qəbul edən ısvalidnumber() funksiyasını yazın.
-  // Telefon nömrəsi 11 rəqəmdən ibarət olduqda və +7 ilə başladıqda, funksiya true qaytarır.
-  // +71234567890
-  
-  // function isValidNumber(number) {
-  //   for (let i = 0; i < number.length; i++) {
-  //     if (number[0] !== "+" || number[1] !== "7" || number.length !== 12) {
-  //       console.log(false);
-  //       break;
-  //     } else if (number[0] === "+" && number[1] === "7" && number.length === 12) {
-  //       console.log(true);
-  //       break;
-  //     }
-  //   }
-  // }
-  // isValidNumber("+7875124732");
-  
-  // Task-11
-  // Mətni parametr kimi qəbul edən və bu mətndəki herflerin sayını qaytaran numCounter funksiyasını yazın.
-  // "15263538479359486()-="';:!@#$%^&*()"
-  // REGEX()
-  
-  // function numCounter(str) {
-  //   for (let i = 0; i < str.length; i++) {
-  //     let count = 0;
-  //     if (
-  //       str[i] === "q" ||
-  //       "w" ||
-  //       "e" ||
-  //       "r" ||
-  //       "t" ||
-  //       "y" ||
-  //       "u" ||
-  //       "i" ||
-  //       "o" ||
-  //       "p" ||
-  //       "a" ||
-  //       "s" ||
-  //       "d" ||
-  //       "f" ||
-  //       "g" ||
-  //       "h" ||
-  //       "j" ||
-  //       "k" ||
-  //       "l" ||
-  //       "z" ||
-  //       "x" ||
-  //       "c" ||
-  //       "v" ||
-  //       "b" ||
-  //       "n" ||
-  //       "m" ||
-  //       "ü" ||
-  //       "ə" ||
-  //       "ğ" ||
-  //       "ö" ||
-  //       "ı" ||
-  //       "ç" ||
-  //       "ş" ||
-  //       "Q" ||
-  //       "W" ||
-  //       "E" ||
-  //       "R" ||
-  //       "T" ||
-  //       "Y" ||
-  //       "U" ||
-  //       "I" ||
-  //       "O" ||
-  //       "P" ||
-  //       "A" ||
-  //       "S" ||
-  //       "D" ||
-  //       "F" ||
-  //       "G" ||
-  //       "H" ||
-  //       "J" ||
-  //       "K" ||
-  //       "L" ||
-  //       "Z" ||
-  //       "X" ||
-  //       "C" ||
-  //       "V" ||
-  //       "B" ||
-  //       "N" ||
-  //       "M" ||
-  //       "Ü" ||
-  //       "Ə" ||
-  //       "Ğ" ||
-  //       "Ö" ||
-  //       "I" ||
-  //       "Ç" ||
-  //       "Ş"
-  //     ) {
-  //       count++;
-  //     } else {
-  //       count = count;
-  //     }
-  //   }
-  // }
-  // console.log(numCounter("gajdbWpic{}?><"));
-  
+// }
+
+// function oneDigits(param) {
+//   switch (param[1]) {
+//     case "1":
+//       return "Bir";
+//     case "2":
+//       return "Iki";
+//     case "3":
+//       return "Uc";
+//     case "4":
+//       return "Dord";
+//     case "5":
+//       return "Bes";
+//     case "6":
+//       return "Alti";
+//     case "7":
+//       return "Yeddi";
+//     case "8":
+//       return "Sekkiz";
+//     case "9":
+//       return "Doqquz";
+//   }
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Task-05
+// Parametr kimi iki ədəd qəbul edən və onlardan ən kiçiyini qaytaran min() funksiyası tərtib edin.
+
+// function min(num1, num2) {
+//   if (num1 > num2) {
+//     return num1;
+//   } else if (num2 > num1) {
+//     return num2;
+//   } else {
+//     return "Ededler beraberdir";
+//   }
+// }
+
+// return(min(8, 8));
+
+// Task-06
+// Parametr kimi iki ədəd və riyazi əməliyyatın işarəsini qəbul edən və
+// bu riyazi əməliyyatın nəticəsini qaytaran calc funksiyasını yazın.
+// Məsələn, calc(4, 6, '+');  //  10 qaytaracaq
+
+// function calc(num1, num2, point) {
+//   if (point === "+") {
+//     return num1 + num2;
+//   } else if (point === "-") {
+//     return num1 - num2;
+//   } else if (point === "*") {
+//     return num1 * num2;
+//   } else if (point === "/") {
+//     return num1 / num2;
+//   } else {
+//     return "Error";
+//   }
+// }
+// return(calc(50, 10, "+"));
+
+// Task-07
+// Biletin şanslı olub olmadığını yoxlayan funksiya yazın.
+// Altı rəqəmli ədəd qəbul edən və ilk üç rəqəminin cəminin ikinci üç rəqəminin cəminə bərabər
+// olduğunu yoxlayan isLucky funksiyasını yazın.
+// Bilet uğurlu olarsa, funksiya true, uğursuz olarsa, false qaytarmalıdır.
+// Məsələn, isLucky(234801);  // true qaytaracaq
+
+// function isLucky() {
+//   let num = 135615;
+//   let str = num.toString();
+//   let firstPart = Number(str[0]) + Number(str[1]) + Number(str[2]);
+//   let secondPart = Number(str[3]) + Number(str[4]) + Number(str[5]);
+//   if (firstPart === secondPart) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// return(isLucky());
+
+// ((((((((((((((((((Task-08
+// capitalizeWords funksiyasını yazın.
+// Funksiya parametr kimi bir neçə sözdən ibarət mətn qəbul edir.
+// Funksiya geriyə eyni mətni qaytarmalıdır, lakin içindəki hər söz böyük hərflə başlamalıdır.
+// Məsələn, capitalizeWords('Hello my name is Harry'); // 'Hello My Name Is Harry' qaytaracaq.))))))))))))))))))
+
+// function capitalizaWords(str) {
+//   let arr = str.split(" ");
+//   let result = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     let str2 = arr[i][0].toUpperCase() + arr[i].slice(1) + " ";
+//     result += str2
+//   }
+//   return(result);
+// }
+// capitalizaWords("type anything bro");
+
+// Task-09
+// Bir ədədi parametr kimi qəbul edən və cüt olduqda true,
+// tək olduqda isə false qaytaran isEven () funksiyasını yazın.
+
+// function isEven(num) {
+//   if (num % 2 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// return(isEven(10));
+
+// Task-10
+// Telefon nömrəsini parametr kimi qəbul edən ısvalidnumber() funksiyasını yazın.
+// Telefon nömrəsi 11 rəqəmdən ibarət olduqda və +7 ilə başladıqda, funksiya true qaytarır.
+// +71234567890
+
+// function isValidNumber(number) {
+//   for (let i = 0; i < number.length; i++) {
+//     if (number[0] !== "+" || number[1] !== "7" || number.length !== 12) {
+//       return(false);
+//       break;
+//     } else if (number[0] === "+" && number[1] === "7" && number.length === 12) {
+//       return(true);
+//       break;
+//     }
+//   }
+// }
+// isValidNumber("+7875124732");
+
+// Task-11
+// Mətni parametr kimi qəbul edən və bu mətndəki herflerin sayını qaytaran numCounter funksiyasını yazın.
+// "15263538479359486()-="';:!@#$%^&*()"
+// REGEX()
+
+// let val = prompt("", "hcdbf76bjfhf%^%^*ncvbhjcmm");
+
+// let result = val.match(/[a-zA-Z]/g);
+// console.log(result.join("").length);
